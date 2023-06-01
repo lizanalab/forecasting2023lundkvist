@@ -611,7 +611,6 @@ function updateMethylationStates(genomes, parameters, pNucleosomes){
 
 function writeOutput(parameters, genomes, fname){
 
-		console.log(fname)
 		/*
 		var stream = fs.createWriteStream(fname);
 		var outString = {'parameters': parameters, 'genomes': genomes}
@@ -668,7 +667,6 @@ function TakePrerunStartProfile(file, genomes, localParams, runNo){
 }
 
 function getFileName(p){
-	console.log(p)
 	return 'SimulationData/meXdata_' + p +'.json';
 }
 
@@ -696,8 +694,8 @@ function handleResult(results){
 }
 
 let parameters = {
-	nGenomes: 100,
-	nNucleosomes: 1000,
+	nGenomes: 10,
+	nNucleosomes: 10,
 	nUpdates: 5760*10,
 	deltaT: 0.25,
 	pDemet: 0.0, // kD in the manuscript.
@@ -712,7 +710,6 @@ let parameters = {
 	snapshotTimes: [51840, 53280, 54720, 56160, 57599],
 	}
 
-let fileLedger = {};
 
 var myArgs = process.argv.slice(2);
 
@@ -721,7 +718,6 @@ let localParams = Object.assign({}, parameters)
 let fname = getFileName(myArgs[0]);
 
 localParams['fileName'] = fname;
-fileLedger[fname] = localParams
 
 var odds = getOdds(localParams['preLength'])
 let neighbourExpDist = []
@@ -752,9 +748,7 @@ for (let time = 0; time<localParams.nUpdates; time++){
 
 writeOutput(localParams, genomes, fname);
 
-makeFileLedger(fileLedger);
-
-console.log(JSON.stringify(localParams, null, 4), '\n', fname)
+console.log(JSON.stringify(localParams, null, 4))
 
 
 
