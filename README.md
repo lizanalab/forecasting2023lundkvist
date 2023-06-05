@@ -8,7 +8,7 @@ For a full description of the model, read the paper.
 
 ## Parameters
 
-The parameters are stored in an object in the script. It takes one argument, which is used to name the output file. 
+The script takes one argument, which is used to name the output file. The parameters are stored in an object in the script. 
 
 | Parameter | Description |
 |:----------|:------------|
@@ -27,12 +27,12 @@ The parameters are stored in an object in the script. It takes one argument, whi
 | tReplication | The frequency of replication |
 | snapshotTimes | The update times when snapshots of the simulated stretch are taken |
 
-## Running the model
+## Running the script
 
 The script is run with [the node.js](https://nodejs.org/en/download) environment, and uses the built-in modules fs and zlib.
 epigen uses [Papa Parse](http://papaparse.com) to read files. This module was installed with npm, and is included in the repository. 
 
-To run on command line:
+To run on the command line:
     `node epigen.js output_filename`
 
 At the end of a successful simulation the object with the used parameters and the output filename are written to console, for example:
