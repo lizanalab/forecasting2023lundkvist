@@ -694,9 +694,9 @@ function handleResult(results){
 }
 
 let parameters = {
-	nGenomes: 10,
-	nNucleosomes: 10,
-	nUpdates: 5760*10,
+	nGenomes: 50,
+	nNucleosomes: 800,
+	nUpdates: 5760*6,
 	deltaT: 0.25,
 	pDemet: 0.0, // kD in the manuscript.
 	k01: 13*0.00025,
@@ -704,10 +704,10 @@ let parameters = {
 	k23: 0.00025,
 	S3: 3.5,
 	preFactor : 350,
-	prePositions: [500],
+	prePositions: [400],
 	preStrengths : [0.5], // PRE occupancy in the manuscript.
 	tReplication: 5760,
-	snapshotTimes: [51840, 53280, 54720, 56160, 57599],
+	snapshotTimes: [28800, 30240, 31680, 33120, 34559],
 	}
 
 
