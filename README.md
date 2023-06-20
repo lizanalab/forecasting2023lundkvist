@@ -4,7 +4,7 @@ A Monte Carlo model of chromatin as a one-dimensional vector of nucleosomes.
 Each nucleosome has two H3K27 positions, which have 0-3 methyl groups. During each simulation step, the algorithm inspects all 
 nucleosomes in random order and tries to add or remove one methyl group from every H3K27 position.
 
-For a full description of the model, read the [paper on bioRxiv]().
+For a full description of the model, read the [paper on bioRxiv](https://www.biorxiv.org/content/10.1101/2023.06.16.545270v1).
 
 ## Parameters
 
